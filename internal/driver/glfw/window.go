@@ -1316,7 +1316,7 @@ func (w *window) triggersShortcut(keyName fyne.KeyName, modifier desktop.Modifie
 		}
 	}
 
-	if shortcut == nil && modifier != 0 && !isKeyModifier(keyName) && modifier != desktop.ShiftModifier {
+	if shortcut == nil && !isKeyModifier(keyName) && modifier != desktop.ShiftModifier {
 		shortcut = &desktop.CustomShortcut{
 			KeyName:  keyName,
 			Modifier: modifier,
